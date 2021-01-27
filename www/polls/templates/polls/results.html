@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+<h1>{{ question.question_text }}</h1>
+
+<ul>
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+{% if question.next_question < 1000 %}
+    <a href="{% url 'polls:detail' question.next_question %}">Go to next question</a>
+{% else %}
+    <a href="{% url 'polls:index' %}">Last question - Back to poll</a>
+{% endif %}
+</body>
+</html>

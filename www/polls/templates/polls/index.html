@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Django Polls App</title>
+        <link rel="stylesheet" type="text/css" href="{%static 'polls/style.css' %}"> 
+    </head>
+    <body>
+
+<h1> Welcome to DJANGO Polls Application running on OVHcloud's web hosting</h1>
+
+<p>We would like to learn more from you.</p>
+<p>Please help us focus on the right things by answering those questions:</p>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+    </body>
+</html>
