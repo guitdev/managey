@@ -27,11 +27,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Deploys your repository to the following environment
-      env:
-        OVH_HOSTING_USER: ${{ secrets.OVH_HOSTING_USER }}
-        OVH_HOSTING_PASSWORD: ${{ secrets.OVH_HOSTING_PASSWORD }}
-        OVH_HOSTING_DOMAIN: ssh.cluster022.hosting.ovh.net
-        REPOSITORY_NAME: managey
-        REPOSITORY_URL: https://github.com/guitdev/managey.git
+      
+        # Deploys your repository to the following environment
+        env:
+          OVH_HOSTING_USER: ${{ secrets.OVH_HOSTING_USER }}
+          OVH_HOSTING_PASSWORD: ${{ secrets.OVH_HOSTING_PASSWORD }}
+          OVH_HOSTING_DOMAIN: ssh.cluster022.hosting.ovh.net
+          REPOSITORY_NAME: managey
+          REPOSITORY_URL: https://github.com/guitdev/managey.git
