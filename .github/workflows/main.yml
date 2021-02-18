@@ -28,7 +28,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Deploy to OVH hosting
-        uses: pitscher/ovh-deploy-hosting-action@v1
         # Deploys your repository to the following environment
         env:
           OVH_HOSTING_USER: ${{ secrets.OVH_HOSTING_USER }}
