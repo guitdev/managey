@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="{{ settings.favicon }}" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#4285f4" />
+  {% if description %}
+  <meta name="description" content="{{settings.bio}}"/>
+  {% endif %}
+  <link rel="stylesheet" href="static/css/fontawesome.css">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="static/css/style.css" />
+  <title>{{settings.name}} | {{settings.pageTitle}}</title>
+  <style>
+  .btn-outline-custom {
+    color: {{ style.buttonFirstColor }};
+    border-color: {{ style.buttonFirstColor }};
+  }
+
+  .btn-outline-custom > span {
+    color: {{ style.buttonFirstColor }} !important;
+  }
+
+  .btn-outline-custom:hover {
+    color: {{ style.buttonSecondColor }};
+    background-color: {{ style.buttonFirstColor }};
+    border-color: {{ style.buttonFirstColor }};
+  }
+
+  .btn-outline-custom:hover > span {
+    color: {{ style.buttonSecondColor }} !important;
+  }
+
+  .social-media a {
+    color: {{ style.footerFirstColor }};
+  }
+  .social-media a:hover {
+    color: {{ style.footerSecondColor }};
+  }
+  </style>
+</head>
+<body style="background-color: {{ style.background }};">
+  <div class="container" style="max-width:680px;">
+    {% include "./partials/bio.html" %}
+
+    <!-- {% include "./partials/links.html" %} -->
+
+    <!-- {% include "./partials/footer.html" %} -->
+  </div>
+</body>
+</html>

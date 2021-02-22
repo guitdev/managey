@@ -1,0 +1,33 @@
+mainLinks:
+  - desc: Get a Node.js (managed) ready environement to use in a minute
+    url: https://labs.ovh.com/managed-nodejs
+    # thumbnail: static/img/jamstack.png
+    isVisible: true
+  - desc: Get a Python (managed) ready environement to use in a minute
+    url: https://labs.ovh.com/managed-python
+    # thumbnail: static/img/jamstack.png
+    isVisible: true
+  - desc: Get a Ruby (managed) ready environement to use in a minute
+    url: https://labs.ovh.com/managed-ruby
+    # thumbnail: static/img/octo-propaganda.jpg
+    isVisible: true
+  - desc: Our Gitter to interact with us
+    url: https://gitter.im/ovh/power-web-hosting
+    isVisible: true
+footerLinks:
+  - icon: envelope
+    url: mailto:contact@altertek.org
+    title: mail
+    isVisible: true
+  - icon: globe
+    url: https://altertek.org
+    title: website
+    isVisible: true
+  - icon: github
+    url: https://github.com/altertek
+    title: github
+    isVisible: true
+  - icon: twitter
+    url: https://twitter.com/altertek
+    title: twitter
+    isVisible: true
